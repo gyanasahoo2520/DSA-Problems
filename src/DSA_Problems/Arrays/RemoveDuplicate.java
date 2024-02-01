@@ -15,7 +15,7 @@ public class RemoveDuplicate {
         return i+1;
     }
     public static void main(String[] args) {
-        int arr[]={1,2,5,6,3,4,5,6,3,2,5,3,2};
+        int[] arr={7,7,5,3,2,5};
         int n=arr.length;
         Arrays.sort(arr);
         int count=duplicate(arr,n);
