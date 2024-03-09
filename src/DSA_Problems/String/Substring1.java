@@ -1,6 +1,8 @@
 package DSA_Problems.String;
 //Remove the string "apple" from another string
 
+import java.util.ArrayList;
+
 public class Substring1 {
     public static void main(String[] args) {
         String str="bcappldg";

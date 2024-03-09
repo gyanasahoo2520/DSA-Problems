@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Permutation {
     public static void main(String[] args) {
-        String str="abcd";
+        String str="abc";
 //        permutations("",str);
 
-//        ArrayList<String> ans=permutationsList("",str);
+        ArrayList<String> ans=permutationsList("",str);
 //        System.out.println(ans);
 
-        System.out.println(permutationsCount("",str));
+//        System.out.println(permutationsCount("",str));
     }
     static void permutations(String p,String up){
         if(up.isEmpty()){
