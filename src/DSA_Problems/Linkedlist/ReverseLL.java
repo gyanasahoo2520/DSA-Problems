@@ -23,6 +23,35 @@ public class ReverseLL extends LL{
         }
         head=prev;
     }
+    public static Node reverse2(Node node){
+        if (node == null) {
+            return head;
+        }
+        Node prev = null;
+        Node present = node;
+        Node next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        head=prev;
+        return head;
+    }
+    public static Node middleNode(Node head){
+        Node s=head;
+        Node f=head;
+
+        while(f!=null && f.next!=null){
+            s=s.next;
+            f=f.next.next;
+        }
+        return s;
+    }
     public static void main(String[] args) {
         LL list=new LL();
         list.addNode(5);
@@ -33,7 +62,10 @@ public class ReverseLL extends LL{
 
         list.display();
 //        reverseLL(head);
-        reverse1(head);
+//        reverse1(head);
+        Node ans=middleNode(head);
+        System.out.println(ans.data);
+        reverse1(ans);
         list.display();
     }
 }
