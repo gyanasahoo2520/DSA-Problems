@@ -1,7 +1,7 @@
 package DSA_Problems.Linkedlist;
 
 public class LL {
-    class Node{
+    static class Node{
         int data;
         Node next;
 
@@ -15,7 +15,7 @@ public class LL {
         }
     }
 
-    public static Node head;
+    public Node head;
     public static Node tail;
 
     public void addNode(int data){

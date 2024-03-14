@@ -19,6 +19,6 @@ public class MidOfLL extends LL{
         numbs.addNode(5);
         numbs.addNode(1);
         numbs.addNode(8);
-        middleNode(head);
+        middleNode(numbs.head);
     }
 }

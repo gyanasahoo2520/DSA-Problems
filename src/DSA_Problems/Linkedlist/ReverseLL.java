@@ -3,7 +3,7 @@ package DSA_Problems.Linkedlist;
 public class ReverseLL extends LL{
     public static void reverseLL(Node node){
         if(node==tail){
-            head=tail;
+//            head=tail;
             return;
         }
         reverseLL(node.next);
@@ -21,11 +21,11 @@ public class ReverseLL extends LL{
             prev=curr;
             curr=curr1;
         }
-        head=prev;
+//        head=prev;
     }
     public static Node reverse2(Node node){
         if (node == null) {
-            return head;
+            return node;
         }
         Node prev = null;
         Node present = node;
@@ -38,9 +38,10 @@ public class ReverseLL extends LL{
             if (next != null) {
                 next = next.next;
             }
+
         }
-        head=prev;
-        return head;
+
+        return prev;
     }
     public static Node middleNode(Node head){
         Node s=head;
@@ -63,9 +64,11 @@ public class ReverseLL extends LL{
         list.display();
 //        reverseLL(head);
 //        reverse1(head);
-        Node ans=middleNode(head);
+        Node ans=middleNode(list.head);
         System.out.println(ans.data);
-        reverse1(ans);
-        list.display();
+        Node s=reverse2(ans);
+        System.out.println(s.data);
+//        list.display();
+        Node temp=list.head;
     }
 }
