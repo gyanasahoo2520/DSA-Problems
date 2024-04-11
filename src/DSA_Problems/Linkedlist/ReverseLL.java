@@ -11,7 +11,7 @@ public class ReverseLL extends LL{
         tail=node;
         tail.next=null;
     }
-    public static void reverse1(Node node){
+    public static Node reverse1(Node node){
 
         Node curr=node;
         Node prev=null;
@@ -22,6 +22,7 @@ public class ReverseLL extends LL{
             curr=curr1;
         }
 //        head=prev;
+        return prev;
     }
     public static Node reverse2(Node node){
         if (node == null) {
@@ -62,13 +63,16 @@ public class ReverseLL extends LL{
         list.addNode(1);
 
         list.display();
-//        reverseLL(head);
-//        reverse1(head);
+//        reverseLL(list.head);
+//        list.display();
+        Node temp=reverse1(list.head);
+        list.head=temp;
+        list.display();
         Node ans=middleNode(list.head);
         System.out.println(ans.data);
         Node s=reverse2(ans);
         System.out.println(s.data);
 //        list.display();
-        Node temp=list.head;
+//        Node temp=list.head;
     }
 }
