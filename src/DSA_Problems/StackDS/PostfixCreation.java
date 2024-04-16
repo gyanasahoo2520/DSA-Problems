@@ -11,7 +11,7 @@ public class PostfixCreation {
         for(int i=0;i<infix.length();i++){
             char ch=infix.charAt(i);
             int ascii=(int)ch;
-            if(ascii>=48 && ascii<=57){// 0 to 9
+            if((ascii>=48 && ascii<=57) || (ascii>=65 && ascii<=89) || (ascii>=97 && ascii<=122)){
                 String s=""+ch;
                 val.push(s);
             }
@@ -30,16 +30,18 @@ public class PostfixCreation {
             }
             else{
                 if(ch=='+' || ch=='-'){
-                    String v2=val.pop();
-                    String v1=val.pop();
-                    char o=op.pop();
-                    String t=v1+v2+o;
-                    val.push(t);
+                    while(!op.isEmpty()){
+                        String v2=val.pop();
+                        String v1=val.pop();
+                        char o=op.pop();
+                        String t=v1+v2+o;
+                        val.push(t);
+                    }
                     //push
                     op.push(ch);
                 }
                 if(ch=='*' || ch=='/'){
-                    if(op.peek()=='*' || op.peek()=='/'){
+                    if(op.peek()=='*' || op.peek()=='/' || op.peek()=='^'){
                         String v2=val.pop();
                         String v1=val.pop();
                         char o=op.pop();
