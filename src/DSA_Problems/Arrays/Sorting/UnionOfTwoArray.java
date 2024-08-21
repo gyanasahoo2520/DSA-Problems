@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class UnionOfTwoArray {
     public static void main(String[] args) {
         int arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        int arr1[] = {1, 1};
         int m=arr1.length;
         int arr2[] = {2, 3, 4, 4, 5, 11, 12};
+//        int arr2[] = {1,1};
         int n=arr2.length;
         ArrayList<Integer> ans=findUnion(arr1,arr2,m,n);
         System.out.println(ans);
