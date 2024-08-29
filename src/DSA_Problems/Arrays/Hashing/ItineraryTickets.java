@@ -23,7 +23,7 @@ public class ItineraryTickets {
             revMap.put(tickets.get(key),key);
         }
         for(String key:tickets.keySet()){
-            if(!revMap.containsKey(key)){
+            if(revMap.containsKey(key)==false){
                 return key;
             }
         }
