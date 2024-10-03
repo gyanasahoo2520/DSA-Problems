@@ -1,4 +1,4 @@
-package DSA_Problems;
+package DSA_Problems.Arrays;
 
 public class MaxProductSubarray {
     static long maxProduct(int[] arr, int n) {
