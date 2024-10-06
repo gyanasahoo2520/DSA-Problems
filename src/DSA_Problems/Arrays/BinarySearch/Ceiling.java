@@ -6,7 +6,7 @@ public class Ceiling {
         int target = 1;
         int ans = ceiling(arr, target);
 
-        System.out.println(ans);
+        System.out.println(arr[ans]);
     }
     static int ceiling(int[] arr,int target){
         int start=0;
