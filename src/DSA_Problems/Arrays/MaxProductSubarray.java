@@ -26,7 +26,7 @@ public class MaxProductSubarray {
     }
 
     public static void main(String[] args) {
-        int a[]={1,2,3,4};
+        int a[]={2, 6, -3,4};
         long ans=maxProduct(a,a.length);
         System.out.println(ans);
     }
