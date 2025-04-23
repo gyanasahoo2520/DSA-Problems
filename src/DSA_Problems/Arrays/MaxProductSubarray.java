@@ -24,10 +24,24 @@ public class MaxProductSubarray {
         }
         return ans;
     }
+    static long maxProduct2(int[] arr, int n){
+        long suff=1,pref=1;
+        long maxi=Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            if(pref==0) pref=1;
+            if(suff==0) suff=1;
+
+            pref=pref*arr[i];
+            suff=suff*arr[n-i-1];
+
+            maxi=Math.max(maxi,Math.max(pref,suff));
+        }
+        return maxi;
+    }
 
     public static void main(String[] args) {
         int a[]={2, 6, -3,4};
-        long ans=maxProduct(a,a.length);
+        long ans=maxProduct2(a,a.length);
         System.out.println(ans);
     }
 }
